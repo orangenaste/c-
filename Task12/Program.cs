@@ -11,7 +11,9 @@ int num1 = Convert.ToInt32(s_num1);
 Console.WriteLine("Enter num2: ");
 string s_num2 = Console.ReadLine();
 int num2 = Convert.ToInt32(s_num2);
-int result =(num1 % num2);
 
-Console.WriteLine ("Remainder of division=");
-Console.WriteLine (result);
+int result =(num1 % num2);
+if(result == 0)
+Console.WriteLine ("multiple");
+else
+Console.WriteLine ("Not multiple. Remainder of division: " +result); 
