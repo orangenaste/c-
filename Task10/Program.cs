@@ -4,11 +4,14 @@
 // 782 -> 8
 // 918 -> 1
 
-var random = new Random();
-int randomNum = random.Next(100, 1000);
-Console.WriteLine(randomNum);
+Console.WriteLine("Enter num: ");
+string s_num = Console.ReadLine();
+int num = Convert.ToInt32(s_num);
 
-int num1 = randomNum / 100;
-int num2 = randomNum % 100;
-int num3 = num2 / 10;
-Console.WriteLine(num3);
+if(num > 99 && num < 1000)
+{
+    int secondDigit = (num/10) % 10;
+    Console.WriteLine($"Second digit of {num} is {secondDigit}");
+}
+else
+Console.WriteLine($"{num} is not a three-digit number");
