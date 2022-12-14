@@ -4,7 +4,11 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.WriteLine("Enter number : ");
-string enterNum = Console.ReadLine();
-int num = Convert.ToInt32(enterNum);
+var random = new Random();
+int randomNum = random.Next(100, 1000);
+Console.WriteLine(randomNum);
 
+int num1 = randomNum / 100;
+int num2 = randomNum % 100;
+int num3 = num2 / 10;
+Console.WriteLine(num3);
