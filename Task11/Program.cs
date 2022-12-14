@@ -7,22 +7,13 @@
 var random = new Random();
 
 int randomNum = random.Next(100, 1000);
-
-Console.Write(randomNum);
+Console.WriteLine(randomNum);
 
 int num1 = randomNum / 100;
-int num2 = randomNum / 10;
+int num2 = (randomNum - num1 * 100)/10;
 int num3 = randomNum - num1*100 - num2*10;
 
-if (num1>num2)
-{
-    Console.WriteLine(num1);
-}
-else if (num1<num2)
-{
-    Console.WriteLine(num2);
-}
-else
-{
-    Console.WriteLine("They are equal");
-}
+int newnum = num1*10 + num3;
+
+
+Console.WriteLine(newnum);
