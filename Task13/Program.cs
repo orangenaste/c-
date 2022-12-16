@@ -4,22 +4,28 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-int 
-static void ViewaThirdDigit2(int num, int index = 3);
-{
-Console.Clear();
+Console.Write("Input number: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
-// if (num-100<0)
-if (num < 100)
+int ThirdDigit(int number)
 {
-    Console.WriteLine("The third digit doesn't exist");
-   return;
+int result = -1;
+if (number >= 100)
+    {
+    while (number > 999)
+    {
+    number = number / 10;
+    }
+    result = number % 10;
+    }
+    return result; 
 }
-while (num > 100)
-{ num /= 10;
-    //int thirdDigit = (num/100)%10;
-    // int firstDigit = num / 100;
-    // int secondDigit = (num/10)%10;
-    // int thirdDigit = num%10;
-Console.WriteLine($"Third digit of {num} is {thirdDigit}");
-}}
+
+if (ThirdDigit(number) == -1)
+{ 
+    Console.WriteLine("Third digit doesn't exist");
+}
+else
+{
+Console.WriteLine($"Third digit is {ThirdDigit(number)}");
+}
