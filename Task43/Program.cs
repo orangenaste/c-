@@ -15,9 +15,9 @@ double k2 = Convert.ToInt32(Console.ReadLine());
 
 // Выразим x: k1 * x + b1 = k2 * x + b2
 //            k1 * x + b1 - k2 * x - b2 = 0
-//            x(k1-k2) + (b1-b2) = 0 ; x = (b1-b2) / (k1 - k2)
+//            x(k1 - k2) + (b1 - b2) = 0 ; x = (b2 - b1) / (k1 - k2)
 
-double pointX = (b1 - b2) / (k1 - k2);
+double pointX = (b2 - b1) / (k1 - k2);
 double pointY = k1 * pointX + b1;
 
-Console.WriteLine($"Точка пересечения двух прямых: {pointX},{pointY}");
+Console.WriteLine($"Point of intersection: {pointX},{pointY}");
