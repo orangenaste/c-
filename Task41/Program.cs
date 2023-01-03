@@ -7,7 +7,7 @@
 Console.Write("Enter integers separating them with a space: ");
 string numbers = Console.ReadLine();
 var arrayNumbers = numbers.Split(" ");
-
+// var arrayNumbers = numbers.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 int[] array = Array.ConvertAll(arrayNumbers, int.Parse);
 int sum = 0;
 for (int i = 0; i < array.Length; i++)
